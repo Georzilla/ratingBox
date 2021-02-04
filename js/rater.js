@@ -1,6 +1,12 @@
 export function Rater(ratingElement) {
     const stars = ratingElement.querySelectorAll('.star');
 
+    const setRating = ev => {
+        ratingElement.setAttribute('data-rating', 
+        ev.currentTarget.getAttribute('data-value')
+        );
+    }
+
     const ratingHover = ev => {
         const currentHover = ev.currentTarget.getAttribute('data-value');
         highlightRate(currentHover);
@@ -21,6 +27,7 @@ export function Rater(ratingElement) {
     resetRating();
 
     stars.forEach(star => {
+        star.addEventListener('click', setRating);
         star.addEventListener('mouseover', ratingHover);
     });
 
