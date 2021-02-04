@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    font-family: sans-serif;
+}
+
+h2 {
+    font-size: 3em;
+    margin: auto;
+    margin-left: 2em;
+    margin-top: 8%;
+}
+
+.star-rater {margin-left: 6%;}
+
+.star-rater .star {
+    font-size: 5rem;
+    color: lightslategrey;
+    
+}
